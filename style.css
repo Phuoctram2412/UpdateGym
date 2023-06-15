@@ -1,0 +1,708 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+body{
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+nav .nav-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav .nav-container div{
+    margin-right: 30px;
+}
+nav .nav-container .service,
+nav .nav-container .club,
+nav .nav-container .blog,
+nav .nav-container .schedule,
+nav .nav-container .member,
+nav .nav-container .nutrition{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+nav .nav-container .service:hover,
+nav .nav-container .club:hover,
+nav .nav-container .blog:hover,
+nav .nav-container .schedule:hover,
+nav .nav-container .member:hover,
+nav .nav-container .nutrition:hover{
+    background-color: red;
+}
+nav .nav-container .service ul,
+nav .nav-container .club ul,
+nav .nav-container .blog ul,
+nav .nav-container .member ul{
+    display: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 38px;
+    padding: 10px;
+    width: 220px;
+}
+nav .nav-container .service ul li,
+nav .nav-container .club ul li,
+nav .nav-container .blog ul li,
+nav .nav-container .member ul li{
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+nav .nav-container .service ul li:hover,
+nav .nav-container .club ul li:hover,
+nav .nav-container .blog ul li:hover,
+nav .nav-container .member ul li:hover{
+    background-color: red;
+    padding: 10px;
+}
+
+nav .nav-container .service:hover ul,
+nav .nav-container .club:hover ul,
+nav .nav-container .blog:hover ul,
+nav .nav-container .member:hover ul{
+    display: block;
+}
+
+nav .nav-container .service:hover i,
+nav .nav-container .club:hover i,
+nav .nav-container .blog:hover i,
+nav .nav-container .member:hover i{
+    transform: rotate(180deg);
+}
+
+nav .free-trial{
+    background-color: red;
+    color: white;
+    padding: 28px 30px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+
+nav .free-trial:hover{
+    background: black;
+    cursor: pointer;
+}
+
+/* nav .nav-container .service ul .class ul,
+nav .nav-container .service ul .train ul,
+nav .nav-container .service ul .challenge ul,
+nav .nav-container .blog ul .news ul,
+nav .nav-container .blog ul .exercise-knowledge ul,
+nav .nav-container .blog ul .exercise ul,
+nav .nav-container .blog ul .yoga ul,
+nav .nav-container .blog ul .nutrition ul{
+    display: none;
+} */
+
+nav .nav-container i{
+    color: white;
+    transition: 0.3s;
+}
+
+/* nav .nav-container .service ul .class:hover ul,
+nav .nav-container .service ul .train:hover ul,
+nav .nav-container .service ul .challenge:hover ul,
+nav .nav-container .blog ul .news:hover ul,
+nav .nav-container .blog ul .exercise-knowledge:hover ul,
+nav .nav-container .blog ul .exercise:hover ul,
+nav .nav-container .blog ul .yoga:hover ul,
+nav .nav-container .blog ul .nutrition:hover ul{
+    display: block;
+    background-color: red;
+    position: absolute;
+    left: 105px;
+    width: 100px;
+} */
+
+
+
+/* ------------------------------------------------nav end------------------------------------------------- */
+
+
+.poster{
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    margin-left: 9%;
+    margin-right: 8%;
+}
+
+.content .gym-content{
+    width: 30%;
+    margin-right: 10%;
+    margin-top: 40%;
+}
+
+.content .gym-content h1{
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.content .gym-content p{
+    font-weight: 1;
+    color: rgb(186, 184, 184);
+}
+
+.content .gym-package-content{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 8%;
+}
+.content .gym-package-content .content-img img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content .gym-package-content .content-detail h3{
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.content .gym-package-content .content-detail{
+    margin-bottom: 20px;
+}
+
+.content .gym-package-content .content-detail p{
+    font-weight: 1;
+    color: rgb(186, 184, 184);
+}
+.content .gym-package-content span{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.content .gym-package-content span:hover{
+    margin-right: 20px;
+}
+
+.luxury-section{
+    margin: 9%;
+    margin-right: 8%;
+    display: flex;
+}
+
+.luxury-section .luxury-text{
+    width: 30%;
+    margin-right: 20%;
+}
+.luxury-section .luxury-text h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.luxury-section .luxury-text p{
+    font-weight: 1;
+    color: rgb(186, 184, 184);
+    margin-bottom: 30px;
+    float: left;
+    line-height: 22px;
+}
+.luxury-section .luxury-text span{
+    font-weight: 1;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.luxury-section .luxury-text span:hover{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.luxury-section .luxury-image{
+    width: 50%;
+}
+
+.luxury-section .luxury-image img{
+    width: 100%;
+}
+
+.luxury-section .luxury-text1{
+    width: 40%;
+    margin-right: 10%;
+    margin-top: 20%;
+}
+.luxury-section .luxury-text1 h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.luxury-section .luxury-text1 p{
+    font-weight: 1;
+    color: rgb(186, 184, 184);
+    margin-bottom: 30px;
+    float: left;
+}
+.luxury-section .luxury-text1 span{
+    font-weight: 1;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.luxury-section .luxury-text1 span:hover{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.luxury-section .luxury-image img{
+    margin-bottom: 30px;
+}
+.luxury-section .luxury-image h4{
+    margin-bottom: 20px;
+    font-weight: 1;
+    font-size: 25px;
+}
+.luxury-section .luxury-image p{
+    font-weight: 1;
+    color: rgb(186, 184, 184);
+}
+
+.contact-container{
+    background-color: white;
+    padding: 9%;
+    color: black;
+    padding-right: 8%;
+}
+
+.contact{
+    display: flex;
+}
+.contact .contact-text{
+    width: 35%;
+    margin-right: 10%;
+}
+.contact-container .contact-form{
+    width: 55%;
+}
+.contact-container .contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contact-form form input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 1;
+}
+.contact-container .contact-form form button{
+    width: 200px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.contact-container .contact-form form button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.contact-container .contact .contact-text h1{
+    color: black;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-container .contact .contact-text p{
+    color: black;
+    color: rgb(30, 30, 30);
+    font-weight: 200;
+    line-height: 24px;
+}
+
+.article-section{
+    padding: 5% 9%;
+    padding-right: 8%;
+    background-color: rgb(215, 215, 215);
+}
+
+.article-section h1{
+    color: black;
+}
+
+.article-section .article-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+}
+.article-section .article-grid .articles{
+    overflow: hidden;
+}
+.article-section .article-grid .articles img{
+    width: 100%;
+    height: 300px;
+    scale: 1.5;
+    margin-bottom: 80px;
+}
+
+.article-section .article-grid .articles p{
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.article-section .article-grid .articles span{
+    color: black;
+    transition: 0.3s;
+}
+.article-section .article-grid .articles span:hover{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.article-section .article-grid .articles i{
+    color: black;
+}
+
+.contact-section{
+    padding: 2% 9%;
+    padding-right: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-section .contact-service{
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+.contact-section .contact-service h1{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.contact-section .contact-service h2{
+    color: red;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.contact-section .contact-service a{
+    margin-bottom: 20px;
+    color: rgb(189, 186, 186);
+    font-weight: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.contact-section .contact-service img{
+    width: 150px;
+}
+
+.active-width{
+    width: 500px;
+}
+
+.poster img{
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+}
+nav .fa-bars{
+    display: none;
+}
+
+.luxury-studio{
+    background-image: url('https://destinationdeluxe.com/wp-content/uploads/2020/06/Beautiful-Yoga-Studios-Fivelements-Habitat-Hong-Kong-Destination-Deluxe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    padding-left: 10%;
+    padding-top: 40px;
+}
+
+.luxury-studio h1{
+    max-width: 300px;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.luxury-studio1{
+    background-image: url('https://i.pinimg.com/originals/38/d3/b5/38d3b5428b8eb9bd3a3404fcd2e4e40e.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    padding-left: 10%;
+    padding-top: 40px;
+}
+
+.luxury-studio1 h1{
+    max-width: 300px;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.luxury-studio p{
+    font-size: 25px;
+}
+.schedule-select{
+    padding: 9%;
+    padding-right: 8%;
+}
+
+.schedule-header{
+    color: black;
+    margin-bottom: 50px;
+}
+
+.participation-section{
+    padding: 9%;
+    padding-top: 0;
+    padding-right: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.participation-section .participation-text h1{
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+
+.participation-section .participation-step .step1{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.participation-section .participation-step .step1 .step1-left{
+    border: 1px solid white;
+    padding: 80px;
+    border-radius: 50%;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.participation-section .participation-step .step1 .step1-left h1{
+    font-size: 80px;
+}
+
+.participation-section .participation-step .step1 .step1-right{
+    max-width: 200px;
+    text-align: center;
+}
+
+.nutrition-content{
+    background-color: white;
+    padding: 20%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    line-height: 30px;
+}
+.nutrition-content h1, .nutrition-content p, .nutrition-content span{
+    color: black;
+    font-weight: 1;
+}
+
+.nutrition-content h1{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.nutrition-content span{
+    font-size: 18px;
+}
+.nutrition-content span p{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.bmi{
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 900px){
+    .contact-section{
+        flex-direction: column;
+    }
+    .active-width{
+        width: 100%;
+    }
+    nav .nav-container{
+        display: none;
+    }
+    nav{
+        padding: 0;
+        margin: 0;
+        justify-content: space-evenly;
+        height: 5vh;
+        overflow: hidden;
+    }
+    
+    nav .logo{
+        margin-left: 0;
+        max-width: 150px;
+        text-align: center;
+        background-color: black;
+    }
+    nav .fa-solid{
+        display: block;
+    }
+    .content{
+        flex-direction: column;
+        
+    }
+    body{
+        padding: 0;
+    }
+    .article-section .article-grid{
+        grid-template-columns: 1fr;
+    }
+    .content .gym-content h1{
+        font-size: 30px;
+    }
+    .poster{
+        height: 95vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .poster img{
+        height: 100%;
+        margin-top: 5vh;
+    }
+    .luxury-section{
+        flex-direction: column;
+    }
+    .luxury-section .luxury-text h1{
+        font-size: 50px;
+    }
+    /* .contact-container{
+        padding-left: 10px;
+        padding-right: 10px;
+    } */
+    .contact-container .contact .contact-text h1{
+        font-size: 30px;
+    }
+    .contact-container .contact .contact-text{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .contact-container .contact .contact-form{
+        width: 100%;
+    }
+    .contact-container .contact .contact-form form button{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .content .gym-package-content{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .content .gym-package-content .content-img{
+        width: 100%;
+    }
+    .content .gym-package-content .content-img img{
+        width: 100%;
+    }
+    .contact-container .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .luxury-section{
+        width: 91%;
+        padding-right: 9%;
+    }
+    .luxury-section .luxury-text{
+        width: 100%;
+    }
+    .luxury-section .luxury-image{
+        width: 91%;
+    }
+    .content .gym-content{
+        width: 100%;
+    }
+    .luxury-section .luxury-image{
+        width: 100%;
+    }
+    .luxury-section .luxury-text1{
+        width: 100%;
+        padding-right: 9%;
+    }
+    .luxury-section .luxury-text1 h1{
+        font-size: 30px;
+    }
+    .contact-section .contact-section{
+        margin-bottom: 50px;
+    }
+    .luxury-studio{
+        padding: 0;
+        padding-top: 200px;
+        padding-left: 20px;
+    }
+    .luxury-studio h1{
+        font-size: 20px;
+    }
+    .luxury-studio1{
+        padding: 0;
+        padding-top: 200px;
+        padding-left: 20px;
+    }
+    .luxury-studio1 h1{
+        font-size: 50px;
+    }
+    .luxury-studio p{
+        font-size: 16px;
+    }
+    .luxury-section .luxury-text h1{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .bmi-img{
+        width: 100%;
+    }
+    .nutrition-content{
+        padding: 20px;
+        padding-top: 80px;
+    }
+    .nutrition-content h1{
+        line-height: 35px;
+        font-size: 30px;
+    }
+    .schedule-container{
+        padding-top: 90px;
+    }
+    .participation-section{
+        flex-direction: column;
+    }
+    .participation-section .participation-step .step1 .step1-left{
+        padding: 0;
+        margin-right: 50px;
+        border: 0;
+    }
+    .participation-section .participation-text h1{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+}
